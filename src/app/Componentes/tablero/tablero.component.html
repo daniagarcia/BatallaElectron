@@ -1,0 +1,17 @@
+<h1>Batalla Naval</h1>
+
+<div *ngIf="botones.length === 36" class="grid-container">
+  <div *ngFor="let boton of botones; index as i" class="grid-item">
+    
+    <button>
+      <span>{{boton}}</span>      
+    </button>
+  </div>
+</div>
+
+<div *ngIf="barcos.length === 36" class="grid-container">
+  <div *ngFor="let barco of barcos; index as i" class="grid-item">
+    <img *ngIf="barcosposicion.includes(barco.cordenada)" src="../../../assets/img/velero.png" alt="">
+    <span>{{barco.cordenada}}</span>
+  </div>
+</div>
